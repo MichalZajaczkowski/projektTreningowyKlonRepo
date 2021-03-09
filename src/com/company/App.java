@@ -12,7 +12,7 @@ public class App {
 
         Car Car1 = new Car("Car1Name");
         Car1.engine = engine1;
-        Car Car2 = new Car("Car2Name");
+        Car Car2 = new Car("Car2Name    ");
         Car2.engine = engine2;
 
         Car1.printName();
