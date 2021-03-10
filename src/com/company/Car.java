@@ -5,7 +5,7 @@ public class Car {
     public Engine engine;
     public int maxSpeed;
 
-   /* public Car({  // konstruktor bezparametrowy
+   /* public Car(){  // konstruktor bezparametrowy
         name = "default";
     }*/
 
@@ -17,5 +17,8 @@ public class Car {
         System.out.println(name);
     }
 
-
+   /* public static void staticMethod(){
+           metody statyczne mogę uruchamiać bezpośrednio na klasie
+           nie potrzebuję od tego obiektu
+    }*/
 }

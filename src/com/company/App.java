@@ -3,6 +3,9 @@ package com.company;
 public class App {
 
     public static void main(String[] args) {
+        //Car.staticMethod();metody statyczne mogę uruchamiać
+        // bezpośrednio na klasie nie potrzebuję od tego obiektu
+
         Engine engine1 = new Engine(150,1500);
         /*engine1.power = 150;
         engine1.capacity = 1500;*/
@@ -23,11 +26,11 @@ public class App {
         Car2.engine.printPower();
         Car2.engine.printCapacity();
 
-        //myCar2.engine => engine2
-        //engine2.power => myCar2.engine.power
+        //Car2.engine => engine2
+        //engine2.power => Car2.engine.power
 
-
-
-
+        StaticExample staticExample = new StaticExample();
+        staticExample.noStaticMethod();
+        StaticExample.staticMethod();
     }
 }
