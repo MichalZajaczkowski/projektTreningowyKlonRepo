@@ -32,5 +32,17 @@ public class App {
         //Car2.engine => engine2
         //engine2.power => Car2.engine.power
 
+        Calculator calculator = new Calculator(15,7);
+        Calculator calculator2 = new Calculator(1574,77);
+        Calculator calculator3 = new Calculator(2135,67);
+        Calculator calculator4 = new Calculator(4451,227);
+
+        calculator.printCalculator();
+        calculator2.printCalculator();
+        calculator3.printCalculator();
+        calculator4.printCalculator();
+
+
+
     }
 }
