@@ -8,6 +8,16 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
+        Car car = biuldCarFromUserInput();
+        printCar(car);
+
+    }
+    private static void printCar(Car car) {
+        System.out.println("nazwa samochodu to: " + car.getName());
+        System.out.println("mocs silnika to: " + car.getEngine().getPower());
+    }
+
+    private static Car biuldCarFromUserInput() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("nazwa samochodu: ");
@@ -22,7 +32,6 @@ public class App {
         car.setEngine(new Engine());
         car.setEngine(engine);
 
-        System.out.println("nazwa samochodu to: " + car.getName());
-        System.out.println("mocs silnika to: " + car.getEngine().getPower());
+        return car;
     }
 }
