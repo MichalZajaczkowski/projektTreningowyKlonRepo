@@ -16,7 +16,7 @@ public class Car {
          this.maxSpeed = maxSpeed;
     }
 
-    public void printName(){ // metoda bezparametrowa
+    public void  printName(){ // metoda bezparametrowa
         System.out.println(name);
     }
     public void printMaxSpeed(){
