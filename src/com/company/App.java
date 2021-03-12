@@ -1,34 +1,26 @@
 package com.company;
 
-import java.util.Scanner;
+import com.company.vehicle.Car;
 
 public class App {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        String s = scanner.nextLine();
-        String s1 = scanner.nextLine();
-        System.out.println(s);
-        System.out.println(s1);
+ /*       Color color = Color.RED;
+        System.out.println(color);
+        System.out.println(color.ordinal());
 
-        System.out.println(countDots(s));
-        System.out.println(countDotsWithReplace(s1));
-    }
-    private static int countDots(String s) {
-        char[] chars = s.toCharArray();
-        int counter = 0;
-        for (int i = 0; i < chars.length; i++) {
-            if (chars[i] == '.'){
-                counter++;
-            }
+        Color[] values = Color.values();
+        for (int i = 0; i < values.length; i++) {
+            System.out.println(values[i]);
         }
-        return counter;
-    }
 
-    private static int countDotsWithReplace (String s1){
-        int baseLength = s1.length();
-        String replace = s1.replace(".", "");
-        int replaceLength = replace.length();
-        return baseLength - replaceLength;
+        Color color1 = Color.valueOf("A");
+        System.out.println(color1);
+        System.out.println(color1.ordinal());*/
+
+        Car car = new Car();
+        car.setColor(Color.RED);
+        System.out.println(car.getColor());
+        System.out.println(car.getColor().getCarColorPl());
     }
 }

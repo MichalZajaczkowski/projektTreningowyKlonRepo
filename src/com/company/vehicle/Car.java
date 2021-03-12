@@ -1,10 +1,14 @@
 package com.company.vehicle;
 
+import com.company.Color;
+
 public class Car {
     private String name;
     private Engine engine;
     private Integer maxSpeed;
-    /* public Car(){  // konstruktor bezparametrowy
+    private Color color;
+
+/* public Car(){  // konstruktor bezparametrowy
             name = "default";
         }*/
 
@@ -49,5 +53,12 @@ public class Car {
 
     public void setMaxSpeed(Integer maxSpeed) {
         this.maxSpeed = maxSpeed;
+    }
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 }
