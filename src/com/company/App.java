@@ -1,22 +1,25 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
 
-        int[] tab = number(4);
-        printTable(tab);
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        System.out.println(s);
+
+        System.out.println(countDots(s));
     }
 
-    private static void printTable(int[] tab) {
-        for (int i = 0; i < tab.length; i++) {
-            System.out.println(tab[i]);
+    private static int countDots(String s) {
+        char[] chars = s.toCharArray();
+        int counter = 0;
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == '.'){
+                counter++;
+            }
         }
-    }
-    public static int[] number(int a) {
-        int[] tab = new int[10];
-        for (int i = 0; i < tab.length; i++) {
-            tab[i] = a++;
-        }
-        return tab;
+        return counter;
     }
 }
