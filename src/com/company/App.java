@@ -7,11 +7,13 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
+        String s1 = scanner.nextLine();
         System.out.println(s);
+        System.out.println(s1);
 
         System.out.println(countDots(s));
+        System.out.println(countDotsWithReplace(s1));
     }
-
     private static int countDots(String s) {
         char[] chars = s.toCharArray();
         int counter = 0;
@@ -21,5 +23,12 @@ public class App {
             }
         }
         return counter;
+    }
+
+    private static int countDotsWithReplace (String s1){
+        int baseLength = s1.length();
+        String replace = s1.replace(".", "");
+        int replaceLength = replace.length();
+        return baseLength - replaceLength;
     }
 }
