@@ -6,16 +6,16 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        try {
-            printNumber();
-        } catch (InputMismatchException e) {
-            System.out.println("wyjatek");
-        }
-        System.out.println("koniec");
+        printNames("a", "b");
+        printNames("A", "B", "C", "D");
     }
-    private static void printNumber() throws InputMismatchException{
-        Scanner scanner = new Scanner(System.in);
-        int i = scanner.nextInt();
-        System.out.println(i);
+    private static void printNames(String...strings){
+ /*       for (int i = 0; i < strings.length; i++) {
+            System.out.println(strings[i]);
+        }*/
+
+        for (String s: strings) {
+            System.out.println(s);
+        }
     }
 }
