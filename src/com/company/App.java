@@ -19,7 +19,7 @@ public class App {
                continue;
             }
             counter++;
-            System.out.println("." + strings[i] + ".");
+            System.out.println("" + strings[i] + "");
         }
         return counter;
     }
