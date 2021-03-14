@@ -6,19 +6,16 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-
-         boolean flag = true;
-         while (flag){
-             try{
-                 Scanner scanner = new Scanner(System.in);
-                 System.out.print("podaj liczbę całkowitą: ");
-                 int ourNumber = scanner.nextInt();
-                 System.out.println("podano: " + ourNumber);
-                 flag = false;
-                 //break;
-             } catch (InputMismatchException e){
-                 System.out.println("musisz podac poprawną wartość");
-             }
-         }
+        try {
+            printNumber();
+        } catch (InputMismatchException e) {
+            System.out.println("wyjatek");
+        }
+        System.out.println("koniec");
+    }
+    private static void printNumber() throws InputMismatchException{
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
+        System.out.println(i);
     }
 }
