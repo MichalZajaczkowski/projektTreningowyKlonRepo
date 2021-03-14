@@ -1,26 +1,17 @@
 package com.company;
 
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-        String s = scanner.nextLine();
-        s = s.trim();
-        System.out.println(wordCounter(s));
-    }
-
-    private static int wordCounter(String s) {
-        String[] strings = s.split(" ");
-        int counter = 0;
-        for (int i = 0; i < strings.length; i++) {
-            if (strings[i].isEmpty()){
-               continue;
-            }
-            counter++;
-            System.out.println("" + strings[i] + "");
+         Scanner scanner = new Scanner(System.in);
+        try{
+            double ourNumber = scanner.nextDouble();
+            System.out.println(ourNumber);
+        } catch (InputMismatchException e){
+            System.out.println("musisz podac liczbę");
         }
-        return counter;
     }
 }
