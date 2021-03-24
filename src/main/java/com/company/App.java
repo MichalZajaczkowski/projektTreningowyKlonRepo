@@ -1,7 +1,5 @@
 package com.company;
 
-import com.company.Animals.Cat;
-import com.company.Animals.Dog;
 import com.company.vehicle.Car;
 import com.company.vehicle.Vehicle;
 
