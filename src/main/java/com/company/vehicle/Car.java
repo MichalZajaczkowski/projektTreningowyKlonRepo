@@ -1,7 +1,5 @@
 package com.company.vehicle;
 
-import com.company.Color;
-
 public class Car {
     private String name;
     private Engine engine;

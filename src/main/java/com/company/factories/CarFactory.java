@@ -1,6 +1,6 @@
 package com.company.factories;
 
-import com.company.Color;
+import com.company.vehicle.Color;
 import com.company.vehicle.Car;
 import com.company.vehicle.Engine;
 
