@@ -1,6 +1,6 @@
 package com.company.vehicle;
 
-public class Car {
+public class Car extends Vehicle{
     private String name;
     private Engine engine;
     private Integer maxSpeed;
