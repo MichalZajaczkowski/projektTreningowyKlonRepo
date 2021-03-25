@@ -1,4 +1,8 @@
 package com.company.Aminals;
 
-public class Cat extends Animals{
+public class Cat implements Animals{
+    @Override
+    public void eat() {
+        System.out.println("cat is food");
+    }
 }
