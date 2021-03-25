@@ -1,5 +1,9 @@
 package com.company.Aminals;
 
 public interface Animals {
-    public void eat();
+    void eat();
+
+    default void printImplDef() {
+        System.out.println("metoda defaultowa w interfejsie");
+    }
 }

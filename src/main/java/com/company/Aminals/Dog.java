@@ -5,6 +5,11 @@ public class Dog implements Animals{
     public void eat() {
         System.out.println("dog eat food");
     }
+
+    @Override
+    public void printImplDef() {
+        System.out.println("metoda defaultowa z interfejsu nadpisana w klasie dog");
+    }
 }
 
 

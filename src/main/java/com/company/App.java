@@ -20,9 +20,12 @@ public class App {
         testInterface(myInterface);
         testInterface(anotherMyInterface);
 
+        System.out.println("==================================");
+
         Dog dog = new Dog();
         Cat cat = new Cat();
         dog.eat();
+        dog.printImplDef();
         cat.eat();
     }
 }
