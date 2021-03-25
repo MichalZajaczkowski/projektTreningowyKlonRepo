@@ -1,16 +1,15 @@
 package com.company;
 
-import com.company.vehicle.Car;
-import com.company.vehicle.Vehicle;
 
+import com.company.Aminals.Cat;
+import com.company.Aminals.Dog;
 
 public class App {
 
     public static void main(String[] args) {
-
-        Car car = new Car();
-        Vehicle vehicle = new Vehicle();
-        car.printId();
-        vehicle.printId();
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        dog.eat();
+        cat.eat();
     }
 }
