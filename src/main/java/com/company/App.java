@@ -1,39 +1,35 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
 
-        Set<Integer> set = new HashSet<>();
-        set.add(4);
-        set.add(2);
-        set.add(6);
-        set.add(2);
-        set.add(8);
-        set.add(7);
-        System.out.println("ilość elementów w secie: " + set.size());
+        Map<Integer, String> integerStringMap = new HashMap<>();
+        integerStringMap.put(12, "pierwszy");
+        integerStringMap.put(2, "drugi");
+        integerStringMap.put(22, "trzeci");
+        integerStringMap.put(14, "czwarty");
+        integerStringMap.put(7, "piaty");
+        integerStringMap.put(74, "czwarty");
+        integerStringMap.put(2, "siódmy");
+        //System.out.println("mapa integerStringMap: " + integerStringMap.get(1));
+        System.out.println(integerStringMap.keySet());
+        System.out.println(integerStringMap.values());
 
-        for (Integer i : set){
-            System.out.println(i);
-           // System.out.println(i.hashCode());
+        for (Integer i : integerStringMap.keySet()) {
+            //System.out.println(i);
+            System.out.println(i +": " +integerStringMap.get(i));
         }
-        System.out.println("======================");
-        List<Integer> list = new ArrayList<>();
-        list.add(14);
-        list.add(11);
-        list.add(13);
-        list.add(11);
-        list.add(17);
-        list.add(13);
 
-        System.out.println("elementy w array list: " + list.size());
+        System.out.println("============================");
 
-        for (Integer q : list) {
-            System.out.println(q);
-        }
+        Map<String, Integer> stringIntegerMap = new HashMap<>();
+        stringIntegerMap.put("jeden", 1);
+        stringIntegerMap.put("klucz", 2);
+        stringIntegerMap.put("trzy", 3);
+
+        System.out.println("mapa stringIntegerMap: " + stringIntegerMap.get("klucz"));
     }
 }
