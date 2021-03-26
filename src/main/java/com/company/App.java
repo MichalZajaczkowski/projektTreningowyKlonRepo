@@ -1,16 +1,21 @@
 package com.company;
 
-import com.company.abstraction.AbstractClass;
-import com.company.abstraction.AbstractClassImpl;
+import java.util.HashSet;
+import java.util.Set;
 
 public class App {
     public static void main(String[] args) {
 
-        AbstractClass abstractClass = new AbstractClassImpl();
+        Set<Integer> set = new HashSet<>();
+        set.add(4);
+        set.add(2);
+        set.add(6);
+        set.add(2);
+        System.out.println("ilość elementów w secie: " + set.size());
 
-        abstractClass.printNumber();
-        abstractClass.printType();
-        abstractClass.printNumber();
-
+        for (Integer i : set){
+            System.out.println(i);
+           // System.out.println(i.hashCode());
+        }
     }
 }

@@ -1,14 +1,22 @@
 package com.company.Aminals;
 
-public class Dog implements Animals{
+import com.company.abstraction.AbstractAnimal;
+
+public class Dog extends AbstractAnimal implements Animals{
+
     @Override
-    public void eat() {
-        System.out.println("dog eat food");
+    public void printNameAnimal() {
+        System.out.println("sparky ");
     }
 
     @Override
-    public void printImplDef() {
-        System.out.println("metoda defaultowa z interfejsu nadpisana w klasie dog");
+    public void printType() {
+        super.printType();
+    }
+
+    @Override
+    public void eat() {
+
     }
 }
 
