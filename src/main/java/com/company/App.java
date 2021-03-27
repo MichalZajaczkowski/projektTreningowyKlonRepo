@@ -1,22 +1,30 @@
 package com.company;
 
-import com.company.vehicle.Car;
+import java.util.*;
 
 public class App {
+
+    private static Map<Integer, List<String>> groupNames(String... names) {
+        //adam, jan, piotr, kasia
+        //3 -jan
+        //4 - adam
+        // 5- piotr, kasia
+        Map<Integer, List<String>> result = new HashMap<>();
+        for (String name : names) {
+            int key = name.length(); //key
+            // pobrać aktualną listę z danego klucza
+
+            result.putIfAbsent(key, new ArrayList<>());
+            List<String> value = result.get(key); // value
+            value.add(name);
+            result.put(key, value);
+        }
+        return result;
+    }
     public static void main(String[] args) {
 
-        MyGenericType t1 = new MyGenericType("string");
-        MyGenericType t2 = new MyGenericType(new Car());
-        MyGenericType t3 = new MyGenericType(3);
-        MyGenericType t4 = new MyGenericType(3.5);
+        Map<Integer, List<String>> map = groupNames("jan", "adam", "piotr", "kasia");
+        System.out.println(map);
 
-        t1.printItemType();
-        t2.printItemType();
-        t3.printItemType();
-        t4.printItemType();
-
-        if (t2.getItem() instanceof Car) {
-            ((Car) t2.getItem()).setMaxSpeed(120);
-        }
     }
 }
